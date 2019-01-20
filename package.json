@@ -1,0 +1,30 @@
+{
+  "name": "parcel-typescript-react-starter",
+  "version": "1.0.0",
+  "description": "Basic starter template for quick frontend projects",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Fil Zembowicz <fil@filosophy.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.7.20",
+    "@types/react-dom": "^16.0.11",
+    "node-sass": "^4.11.0",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-typed-css-modules": "^1.1.0",
+    "postcss-modules": "^1.4.1",
+    "prettier": "^1.16.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
