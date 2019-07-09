@@ -1,0 +1,87 @@
+$plane-background-color: #eee;
+$selected-seat-color: lightblue;
+
+$nose-length: 50px;
+$seat-size: 20px;
+$wing-length: 20px;
+
+
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: $nose-length;
+  padding-left: $wing-length;
+  padding-right: $wing-length;
+}
+
+.plane {
+  font-family: Avenir, Helvetica, sans-serif;
+  background-color: $plane-background-color;
+  position: relative;
+  padding: 8px;
+  user-select: none;
+
+  &:after {
+    background-color: $plane-background-color;
+    content: '';
+    position: absolute;
+    height: $nose-length;
+    top: -$nose-length;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+  }
+
+  &:before {
+    content: '';
+    width: calc(100% + #{2 * $wing-length});
+    height: 100px;
+    background-color: $plane-background-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-top-left-radius: $wing-length;
+    border-top-right-radius: $wing-length;
+  }
+
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(5, $seat-size);
+}
+
+.aisle {
+  width: $seat-size;
+  height: $seat-size;
+}
+
+.seat {
+  width: $seat-size;
+  height: $seat-size;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &.unavailable {
+    color: #ccc;
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  &.selected {
+    background-color: $selected-seat-color;
+  }
+}
+

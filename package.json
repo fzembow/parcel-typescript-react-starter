@@ -1,10 +1,10 @@
 {
-  "name": "parcel-typescript-react-starter",
+  "name": "seat-picker-question",
   "version": "1.0.0",
-  "description": "Basic starter template for quick frontend projects",
+  "description": "Example of a seat picker question for Formsort custom question API",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "parcel src/index.html --port 1111",
     "build": "parcel build src/index.html --public-url ./"
   },
   "author": "Fil Zembowicz <fil@filosophy.org>",
@@ -23,6 +23,7 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "tslint-react": "^4.0.0"
