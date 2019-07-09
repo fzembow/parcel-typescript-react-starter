@@ -1,5 +1,5 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import SeatPickerQuestion from './components/SeatPickerQuestion';
+import App from './components/App';
 
-render(<SeatPickerQuestion />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
